@@ -3,7 +3,7 @@ from sqlalchemy import Column, Integer, String, Float
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-engine = create_engine("mysql+pymysql://root:Aa0909263940!@34.207.112.153:3306/cxcxc_DB")
+engine = create_engine("mysql+pymysql://{{DB_USER}}:{{DB_PASS}}@{{DB_HOST}}:3306/cxcxc_DB")
 SessionLocal = sessionmaker(bind=engine)
 database = declarative_base()
 
